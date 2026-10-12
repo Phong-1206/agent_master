@@ -11,7 +11,7 @@ def update_version():
             text=True, 
             check=True
         )
-        print(result)
+        # print(result)
         commits_behind = len(result.stdout.strip().split('\n')) if result.stdout.strip() else 0
         if commits_behind > 0:
             print(f" Phát hiện {commits_behind} commit mới trên GitHub. Tiến hành cập nhật...")
@@ -32,7 +32,7 @@ def update_version():
             #Thoát khỏi phiên bản cũ
             sys.exit(0)
         else:
-            print("Bạn đang sử dụng phiên bản mới nhất.")
+            print("Bạn đang sử dụng phiên bản mới nhất. 12/10")
     except subprocess.CalledProcessError as e:
         print(f"Lỗi lệnh Git: {e}")
     except Exception as e:
